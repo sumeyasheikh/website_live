@@ -1,0 +1,789 @@
+body {
+    background-color: rgb(247, 247, 247);
+    padding: 0;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 1s ease-in-out forwards 3s;
+  pointer-events: none;
+}
+
+.spinner .circle {
+  border: 6px dashed white;
+  border-radius: 40%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s ease-out infinite;
+}
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.container, .menu-item, nav, header, footer, section, main {
+  animation: transitionIn 2s ease-in-out forwards ;
+}
+
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-5deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+
+
+/*  header */
+header {
+  background-color: rgb(208, 208, 208);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add inner box shadow */
+  padding: 10px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+header img {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 45px;
+  width: auto;
+
+}
+
+
+@media (max-width: 600px) {
+header {
+        width: auto;
+        background-color: rgb(221, 221, 221);
+        padding: 20px;
+        margin: 0;
+    }
+ header img {
+        width: 80px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        float:inline-start;
+  }
+}
+
+
+    /*  header */
+
+  /* homepage main */
+
+.home-main h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.home-main p {
+    font-size: 25px;
+    color: rgb(75, 74, 74);
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    font-weight: 100;
+}
+
+.home-main {
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 100px;
+    line-height: 40px;
+
+}
+
+/* homepage main */
+
+/* button */
+
+.second-btn{
+  background-image: linear-gradient(180deg,#ed58c3, #9356DC);
+  text-align: center;
+  width: 60%;
+  padding: 20px 59px ;
+  border-radius: 3em;
+  transform: scale(1);
+  transition: all 200ms;
+  border-style: none;
+  box-shadow: 30px 0px 40px rgb(0,0,0,0.2), -30px 0px 40px rgb(0,0,0,0.2);
+  margin: 30px;
+  color: white;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: 600;
+  
+}
+
+.second-btn a {
+
+  color: white;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.second-btn:hover {
+  background-image: linear-gradient(180deg,#fc9fe3, #8160a9);
+  transform: scale(1.10);
+}
+
+@media only screen and (min-width: 601px) {
+    .button  {
+      display: none; /* Hide the button on desktop screens */
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .button {
+      display: block; /* Show the button on mobile screens */
+      justify-content: center; /* Center the button horizontally */
+    }
+  }
+
+ /* button done */
+
+
+  /* homesection*/
+
+
+ .homesection {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 0;
+}
+
+.homesection h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: 25px;
+}
+
+.homesection  h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-align: start;
+    padding-top: 7px;
+}
+
+
+.explore-list:hover .material-symbols-outlined {
+  color:#843fd8;
+  animation: 0.2 ease-in;
+}
+
+.explore-list:hover {
+background-color: #f1eaf9;
+color: rgb(0, 0, 0);
+transform: scale(1.05)
+}
+
+
+.container-explore {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.number-group{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.numbers {
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  background-color: #9356DC;
+  color: white;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 100%;
+  margin-left: -8px;
+  margin-top: -70px;
+}
+
+.number-icon {
+  font-size: 15px;
+  margin-top: 2px;
+  font-family: sans-serif;
+}
+
+
+
+.explore-list {
+    border-radius: 1.5em;
+    text-align: center;
+    margin: 10px;
+    padding: 8px;
+    width: 35%;
+    background-color: rgb(217, 217, 217);
+    transform: scale(1);
+    transition-property: all;
+    transition-duration: 200ms;
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .homesection h2 {
+    text-align: left;
+    padding-left: 10px;
+
+  }
+  .container-explore {
+    display: flex;
+    flex-direction: column;
+  }
+  .explore-list {
+    width: 90%;
+  }
+}
+
+  /* homesection done */
+
+
+/* nav  */
+
+nav {
+    background-color: rgb(207, 207, 207);
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 8px rgb(28, 28, 28);
+
+}
+
+.paris-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+}
+
+.paris-location {
+  margin-right: 10px;
+}
+
+nav h3 {
+padding-left: 10px;
+}
+
+/* nav done */
+
+/* card */ /* restuarant */
+
+.restaurant {
+    background-color: rgb(221, 221, 221);
+    margin: 0;
+    padding: 20px;
+ }
+
+.restaurant h1 {
+  margin: 30px;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+
+.container-homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card img {
+    display: block;
+    height: 230px;
+    width: 100%;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  margin-bottom: 25px;
+  width: 90%;
+  border-radius: 1em;
+  transition:all 200ms;
+  box-shadow: 30px 0px 40px rgb(0,0,0,0.1), -30px 0px 40px rgb(0,0,0,0.2);
+  padding-bottom: 10px;
+  position: relative;
+
+
+}
+
+.card-group {
+  display: flex;
+  flex-direction: column;
+  margin-left: 18px;
+}
+
+#full-heading {
+display: flex;
+flex-wrap: wrap;
+}
+
+
+
+.card:hover {
+        transform: scale(0.9);
+}
+
+.heart {
+
+  font-size: 30px;
+  display: flex;
+  margin: 30px;
+  
+}
+
+.card-groupie {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+
+.newyork {
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 7px;
+}
+
+.card h2 {
+  font-size: 25px;
+  padding:14px 2px;
+  margin: 0;
+}
+
+.heart {
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  transition: all 0.3s;
+  transition-timing-function: ease-in-out;
+
+}
+
+
+.heart:hover {
+  color:#9058d4;
+  -webkit-text-stroke-color: #925cd5;
+}
+/* card done */
+
+.material-symbols-outlined {
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        float: left;
+        padding: 25px;
+        color: rgb(53, 53, 53);
+    }
+
+  
+    
+/* footer  */
+
+footer {
+  height: auto;
+  padding: 30px 0px;
+  background-color: rgb(69, 68, 68);
+}
+
+footer img {
+  margin: 20px;
+  filter: brightness(0) invert(1);
+  width: 10%;
+}
+
+.fa-handshake-simple, .fa-utensils {
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+ul li {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 35px;
+  list-style-type: none;
+  color: white;
+  text-align: left;
+
+}
+
+li a {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  footer img {
+    margin: 20px;
+    filter: brightness(0) invert(1);
+    width: 25%;
+  }
+
+  ul li {
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 35px;
+    list-style-type: none;
+    color: white;
+    text-align: left;
+
+  }
+
+  li a {
+    color: white;
+  }
+}
+
+
+
+
+    
+    /* footer done */
+
+/* notes
+
+When you click on Contact, a link to an email address is made.
+
+● When hovering, the background color of the main buttons should lighten slightly. The drop shadow should also be more visible.
+● Eventually, visitors will be able to save their favorite menus. For that, a heart-shaped Like button is present on the model. When you click on it, it should fill up gradually. For this first version, the effect can appear on hovering on desktop instead of clicking.
+
+
+Home Page
+● When the application has more menus, a loading spinner will be necessary. On this mock-up, we would like to have a preview of it. It will have to appear for 1 to 3 seconds when you arrive on the home page, cover the whole screen, and use CSS animations (no library). The design of this loader is not defined, so any proposal is welcome as long as it is consistent with the graphic charter.
+
+Menu Pages
+● When arriving on the page, the dishes should appear gradually with a slight time lag. They may appear either one by one or by group Starter, Main course, and Dessert. An example of the expected effect is provided.
+● The visitor can add the dishes he wishes to his order by clicking on them. A small checkmark will appear to the right of the dish. This tick should slide from right to left. For this first version, the effect can be displayed on hovering on desktop instead of clicking. If the title of the dish is too long, it will have to be trimmed with suspension points. An example of the expected effect is provided.
+
+
+*/
+
+/* banner  main */
+
+
+  
+
+
+@media only screen and (min-width: 601px) {
+    main , .slideshow , .banner-main img, .our-story , .our-story img{
+      display: block;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .slideshow , .banner-main img, .our-story, .our-story, nav  img {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+     .home-main,  .homesection img , .number-group{
+      display: none; 
+    }
+  }
+
+
+
+
+
+/* banner  main */
+
+/* Main Main Main */
+
+.our-story {
+  position: relative;
+
+}
+
+.backgroud-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background-color: rgb(94, 94, 94);
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.welcome-box {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: large;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  margin: 10% 10%;
+  
+}
+
+.welcome-box p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(179, 137, 179);
+  font-weight: bold;
+  margin: 0;
+}
+
+.welcome-box h2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+}
+
+.explore {
+  width: 150px;
+  height: 20px;
+  background-color: orange;
+  border-radius: 1em;
+  padding: 13px;
+  padding-top: 16px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  font-weight: 800;
+}
+
+
+@media only screen and (max-width: 950px) {
+  
+  .welcome-box p, h2 {
+    font-size: small;}
+    .explore {
+      width: 100px;
+      height: 12px;
+      padding: 14px;
+      font-size: x-small;
+    }
+
+  }
+
+ 
+  .new-box {
+    position: absolute;
+    top: 5%;
+    left: 73%;
+    width: 100px;
+    height: 28px;
+    font-size: 14px;
+    color: rgb(65, 148, 127);
+    background-color: rgb(140, 216, 193);
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 10px;
+  
+  
+  }
+  @media only screen and (min-width: 601px) {
+    .new-box {
+      position: absolute;
+      top: 5%;
+      left: 55%;
+      width: 70px;
+      height: 18px;
+
+    }
+  }
+
+
+
+@media only screen and (min-width: 601px) {
+  .container-homepage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card img {
+  display: block;
+  height: 120px;
+  width: 100%;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+}
+
+.card {
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin: 10px;
+height: 100%;
+width: 40%;
+}
+
+.card h2 {
+font-size: 13px;
+}
+
+.card p, .newyork {
+  font-size: 12px;
+}
+
+.heart {
+  display: block;
+  font-size: 13px;
+}
+}
+
+.new-box {
+  z-index: 1;
+}
+
+@media only screen and (max-width: 898px) and (min-width: 811px) {
+  .card img {
+    height: 90px;
+  }
+  .card h2 {
+    font-size: 14px;
+  }
+  .card p {
+    font-size: 8px;
+    margin: 0;
+    padding: 4px;
+  }
+  .heart {
+    margin: 15px;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+  #enchanted, #full {
+    font-size: 10px;
+  }
+  .new-box {
+    position: absolute;
+    top: 5%;
+    left: 55%;
+    width: 50px;
+    height: 10px;
+    font-size: 10px;
+    padding-bottom: 5px;
+
+
+  }
+}
+
+@media only screen and (max-width: 815px) and (min-width: 600px) {
+
+ #enchanted, #full, #full p , #enchanted p {
+    font-size: 9px;
+  }
+  .card image {
+    height: 55px
+  }
+  .heart {
+  font-size: 8px;
+  }
+  .new-box {
+    position: absolute;
+    top: 5%;
+    left: 55%;
+    width: 40px;
+    height: 7px;
+    font-size: 7px;
+    padding-bottom: 5px;
+
+  }
+  .card h2 {
+    font-size: 11px;
+  }
+  .card p {
+    font-size: 8px;
+  }
+  .explore-list {
+    font-size: 13.5px;
+  }
+  .explore-list .material-symbols-outlined {
+    font-size: 14px;
+  }
+}
+
+
+@media only screen and (max-width: 494px) {
+  .new-box {
+    position: absolute;
+    top: 5%;
+    left: 65%;
+    width: 80px;
+    height: 10px;
+    font-size: 10px;
+    padding-bottom: 10px;
+  }
+  .restaurant h1 {
+    font-size: 20px;
+  }
+  .card img{
+height: 180px;
+  }
+  .card h2, .card p, .heart, ul li, .home-main p , .home-main h1, .explore-list h4, .homesection h2, .paris-navbar h3 {
+    font-size: small;
+  }
+  .second-btn {
+    padding: 10px 35px;
+    font-size: small;
+  }
+  
+}
